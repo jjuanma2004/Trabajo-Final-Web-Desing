@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+Autor = Diego Rodríguez Suárez-Bustillo
+Fecha = 24-oct-2014
+Licencia = gpl30 
+Version = 1.0
+Descripcion = 
+-->
+
+<!--
+Copyright (C) 2014 Diego Rodríguez Suárez-Bustillo
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="" rel="stylesheet" />
+        <style type="text/css">
+            p{background: crimson;}
+            .parrafo{background: pink;}
+            p.parrafo{background: maroon;}
+            #id-parrafo{background: orange;}
+            p#id-parrafo{background: red;}
+            p.parrafo#id-parrafo{background: green;}
+        </style>
+    </head>
+    <body>
+        <p>Parrafo</p>
+        <p class="parrafo">Parrafo</p>
+        <div class="parrafo">Parrafo</div>
+        <p id="id-parrafo" class="parrafo">Parrafo</p>
+        <p id="id-parrafo" style="background: black;">Parrafo</p>
+        <p id="id-parrafo">Parrafo</p>
+    </body>
+</html>

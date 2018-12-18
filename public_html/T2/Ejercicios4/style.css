@@ -1,0 +1,181 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    color: #E5DFC5;
+    font-family: sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    background: #252120;
+}
+h1 {
+    color: #A92F41;
+}
+h3 {
+    color: #91C7A9;
+}
+ol, ul {
+    list-style: none;
+}
+a {
+    color: #91A7F9;
+    text-decoration: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+body {
+    font: 12px/18px Arial, sans-serif;
+}
+.wrapper {
+    max-width: 1000px;
+    min-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+    height: 150px;
+    background: #252120;
+    border: dotted 1px #E5DFC5;
+    border-bottom: 0px;
+}
+#logo{
+    width: 133px;
+    height: 133px;
+    background-image: url('logo.png');
+    background-size: 133px;
+    margin: 0;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+}
+#name{
+    margin-left: 10px;
+    float: left;
+    font-family: gourmet;
+    font-size: 70px;
+    padding-top: 80px;
+    padding-left: 10px;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.middle {
+    width: 100%;
+    position: relative;
+    background: #252120;
+}
+.middle:after {
+    display: table;
+    clear: both;
+    content: '';
+}
+.container {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+.content {
+    padding: 0 0 0 270px;
+    border: dotted 1px #E5DFC5;
+    min-height: 400px;
+}
+
+
+/* Left Sidebar
+-----------------------------------------------------------------------------*/
+.left-sidebar {
+    float: left;
+    width: 250px;
+    margin-left: -100%;
+    position: relative;
+    background: #252120;
+    border: dotted 1px #E5DFC5;
+    min-height: 400px;
+    /*padding-left: 50px;*/
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+    height: 70px;
+    background: #252120;
+    border: dotted 1px #E5DFC5;
+    border-top: 0px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+//MENU
+#cssmenu {
+  background: #333;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+/*  width: 12em;*/
+}
+#cssmenu li {
+  font: 100% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+  margin: 0;
+  padding-left: 15px;
+  list-style: none;
+}
+#cssmenu a:before {
+  content: 'l..l, ';
+}
+#cssmenu a {
+  background: #333;
+  border-bottom: 1px solid #393939;
+  color: #ccc;
+  display: block;
+  margin: 0;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-weight: normal;
+}
+#cssmenu a:hover {
+  background: #2580a2 url("hover.gif") left center no-repeat;
+  color: #fff;
+  padding-bottom: 8px;
+}

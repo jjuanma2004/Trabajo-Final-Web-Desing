@@ -1,0 +1,187 @@
+/*
+Autor = Diego Rodríguez Suárez-Bustillo
+Fecha = 28-oct-2014
+Licencia = gpl30
+Version = 1.0
+Descripcion = Estilos para la página Gourmet Race
+*/
+
+/*
+Copyright (C) 2014 Diego Rodríguez Suárez-Bustillo
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http: //www.gnu.org/licenses/>.
+*/
+
+/*Fuente personalizada*/
+@font-face {
+    font-family: gourmet;
+    src: url(gourmet.ttf);
+}
+/*Estilos de etiquetas*/
+body{
+    font-family: Arial;
+    font-size: 13px;
+    color: #330B09;
+}
+a{
+    color: #330B09;
+}
+a:hover{
+    color: #F8BAA5;
+}
+/*Estilo del div envoltorio*/
+#wrapper{
+    /*Define el ancho de pagina y mostrarla centrada*/
+    width: 980px;
+    margin: 0 auto;
+    border: solid 5px #330B09;
+    border-bottom: 0;/*Evita que se junten el color del footer con el borde*/
+}
+/*Estilo de cabecera*/
+#header{
+    background-color: #FDF0D0;
+    height: 130px;
+    padding: 10px 10px 10px;
+}
+/*Estilo del logo de la cabecera*/
+#logo{
+    width: 155px;
+    height: 133px;
+    background-image: url('logo.png');
+    background-size: 155px;
+    float: left;
+}
+/*Estilo del nombre de la empresa*/
+#nombre{
+    margin-left: 10px;
+    float: left;
+    font-family: gourmet;
+    font-size: 70px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+/*Estilo del contenedor de navegacion*/
+#navegacion{
+    height: 50px;
+    background-color: #F8BAA5;
+    border-top: solid 15px black;
+    border-bottom: solid 15px black;
+}
+/*Estilo del contenedor de posicionamiento horizontal del menú*/
+#botones{
+    margin: 0 auto;
+    width: 900px;
+    padding-left: 50px;
+}
+/*Estilo del menú en lista*/
+#menu{
+    /*Elimina los puntos de la lista con list-style: none;*/
+    background-color: #414141;
+    list-style: none;
+    text-align: center;
+}
+/*Estilo de cada elemento LI del menú*/
+#menu li{
+    float: left;/*importante para la forma horizontal*/
+    position: relative;
+    height: 35px;
+    background-color: rgba(255,255,255,0.4);
+    margin-right: 5px;
+    padding: 0 10px;
+    top: -5px;
+}
+/*Estilo para señalar el Hover y la sección actual*/
+#menu li:hover, #menu li.actual{
+    background-color: rgba(255,255,255,0.75);
+}
+/*Estilo de los enlaces del menú*/
+#menu li a{
+    color: #330B09;
+    text-decoration: none;
+    font-family: gourmet;
+    font-size: 45px;
+    line-height: 0.9em;
+    font-weight: normal;
+    padding: 5px 15px -1px 15px;
+    display: block;
+}
+/*Estilo de los submenus*/
+#menu li ul{
+    background: rgba(255,255,255,0.5);
+    display: none; /*importante para que los submenus no estén visibles*/
+    position: absolute;
+    margin-top: 0;
+    padding-left: 0; /*para eliminar el padding de la lista*/
+    margin-left: -10px; /*ajuste del ancho del submenu*/
+}
+/*Estilo para mostrar los submenus*/
+#menu li:hover ul{
+    /*con este selector definimos que cuando el cursor este sobre un 
+    elemento LI que contenga un elemento UL le asigne la propiedad 
+    display: block; para que este a su vez pase de invisible a visible*/
+    display: block;
+}
+/*Estilo de los elementos LI del submenú*/
+#menu li ul li{
+    width: 100%;
+    list-style: none;
+    padding: 5px 0;
+}
+/*Estilo de los enlaces del submenú*/
+#menu li ul li a{
+    font-size: 30px;
+    line-height: 1em;
+    font-weight: normal;
+}
+/*Estilo hover para los enlaces del submenú*/
+#menu li ul li a:hover{
+    text-decoration: underline;
+}
+/*Estilo para el contenedor del main*/
+#content{
+    background-color: #FEE9CE;
+    min-height: 350px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+/*Estilo del main*/
+#main{
+    padding: 10px;
+    margin: 0 auto;
+    width: 60%;
+}
+/*Estilo para cabeceras del main*/
+#main h1{
+    font-family: gourmet;
+    font-weight: lighter;
+}
+/*Estilo del footer*/
+#footer{
+    background-color: #330B09;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 11px;
+    color: #FDF0D0;
+}
+/*Estilo de los enlaces del footer*/
+#footer a{
+    text-decoration: none;
+    color: #F8BAA5;
+    font-weight: lighter;
+}
+/*Estilo para el hover de los enlaces del footer*/
+#footer a:hover{
+    text-decoration: underline;
+    color: #FEE9CE;
+}

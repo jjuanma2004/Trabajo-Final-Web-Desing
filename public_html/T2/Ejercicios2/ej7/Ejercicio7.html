@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+Autor = Diego Rodríguez Suárez-Bustillo
+Fecha = 10-oct-2014
+Licencia = gpl30 
+Version = 1.0
+Descripcion = a. Analice el código. Se han definido dos clases asociadas al body:
+body.main-sidebar y body.sidebar-main. Dependiendo de qué clase se
+use en la etiqueta <body> el div asociado a la barra lateral (sidebar)
+se pondrá a la derecha o a la izquierda. Por lo tanto se puede
+apreciar cómo de fácil es cambiar una distribución con sólo cambiar
+la clase css. Aplica las 2 clases y visualiza la diferencia.
+b. Analice el atributo float. Lo veremos en detalle en la siguiente
+sección pero vamos a ir familiarizándonos. El valor float:left indica
+que la caja con este estilo se coloca a la izquierda y el resto de cajas
+posteriores que se creen y que estén en la misma posición se colocan
+a la derecha de ésta. Esto es lo que le da el efecto de una caja main
+a la izquierda y el sidebar apoyado a su derecha. Cuando es
+float:right lo que indica es que la caja se coloca a la derecha. Esto da
+el efecto de una caja main a la derecha y el sidebar apoyado a la
+izquierda.
+El efecto de un float sigue hasta que se usa en una caja un estilo
+clear.
+El problema surge si posteriormente se desea colocar una caja que
+ya no se apoye a la derecha (o izquierda) de la flotante sino que se
+coloque debajo como se hace por defecto (sin atributo position). En
+este caso esa nueva caja se tiene que crear un estilo clear. Si se
+pone clear:left se indica que ya no se quiere colocar esa caja
+adyacente a una definida con float:left. Si pone clear:right lo que se
+indica es que ya no se quiere colocar esa caja adyacente a una
+definida con float:right. El estilo clear elimina el efecto del float.
+-->
+
+<!--
+Copyright (C) 2014 Diego Rodríguez Suárez-Bustillo
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html>
+    <head>
+        <title>Haciendo una nota con estilo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+
+            div#content  /*Define una identificador "content" asociado a un elemento <div>. Es la posición del cuerpo de la página (barra lateral más contenido) */
+            {
+                margin:auto auto auto auto;  /* top right bottom left: equivale a poner un sólo auto */
+                width:710px; /* El ancho del estilo lo coloca en 710px */
+            }
+            div#header /*Define una identificador "header" asociado a un elemento <div>. Es la posici�n de la cabecera */
+            {
+                margin:10px auto 10px auto;
+                width:710px;
+                border:dotted 1px #CCC;
+            }
+            div#sidebar
+            {
+                display:none;
+                border:solid 1px #CCC;
+                margin: auto auto auto 15px;
+
+            }
+
+            body.main-sidebar div#main, body.sidebar-main div#main
+            {
+                width:490px;
+
+            }
+
+            body.main-sidebar div#sidebar, body.sidebar-main div#sidebar
+            {
+                display:block;
+                width:200px;
+                border:solid 1px #CCC;
+            }
+            body.main-sidebar div#main, body.main-sidebar div#sidebar  /*Main-sidebar. Este estilo coloca el sidebar a la derecha y el main a la izquierda */
+            {
+                float:left;
+                border:solid 1px #CCC;
+            }
+            body.sidebar-main div#main, body.sidebar-main div#sidebar /*Sidebar-main. Este estilo coloca el sidebar a la izquierda y el main a la derecha*/
+            {
+                float:right;
+                border:solid 1px #CCC;
+            }
+
+
+
+        </style>
+    </head>
+
+    <body class="sidebar-main">
+        <div id="header">Cabecera. RESTAURANTE: El muslito</div>
+
+        <div id="content">
+            <div id="main">Este restaurante es una de las referencias gastronómicas del esta zona. [...] </div>
+            <div id="sidebar">Menú principal </div>
+
+        </div>
+    </body>
+
+
+</html>

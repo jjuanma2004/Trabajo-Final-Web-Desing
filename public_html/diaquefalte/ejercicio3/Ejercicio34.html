@@ -1,0 +1,44 @@
+<!--
+    Autor=Laura Lozano Calvo
+    Fecha=10-oct-2013
+    Licencia=GPL v3
+    Versión=1.0
+    Descripción=
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            div.morada{
+                position: absolute;
+                width:300px;                     
+                background-color: #606;
+                color:#ffc;
+                padding: 10px;
+                text-align: center;
+                z-index: 2;
+
+            }
+            div.verde{
+                position:relative;
+                width:300px;
+                left:30px;
+                background-color: #066;
+                color:#ffc;
+                padding: 10px;
+                top: 30px
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1> NO define posición </h1>
+        <div class="morada">No define posición por lo que es static</div>
+        <div class="verde">Capa de posicionamiento relativo<br> Se tiene en cuenta esta capa para posicionar
+            las siguientes</div>
+        <h2>La última en ponerse</h2>
+    </body>
+</html>

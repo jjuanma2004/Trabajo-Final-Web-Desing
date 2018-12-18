@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+Autor = Diego Rodríguez Suárez-Bustillo
+Fecha = 07-nov-2014
+Licencia = gpl30 
+Version = 1.0
+Descripcion = Cumpliendo los siguientes requisitos:
+ La página Web debe estar pensada para una resolución de 1024, para
+resoluciones superiores se debe mostrar un wrapper
+ Todas las fotos que aparecen en la página se encuentran en la carpeta
+llamada “Fotos”
+ En el proyecto Web se debe crear una carpeta llamada “Fotos” donde se
+encuentren todas las fotografías, una carpeta llama “CSS” donde se
+encuentre la hoja de estilo de la página y otra carpeta llamada “Fuentes”
+donde se encontrarán las fuentes utilizadas
+ Cuando pasemos el ratón por una de las fotos en miniatura, esta se volverá
+más opaca, indicando que ha sido seleccionada; y aparecerá la fotografía
+seleccionada más grande debajo de las miniaturas, tal y como se muestra en
+la figura anterior
+ Para cumplir el requisito anterior nos ayudaremos de la instrucción de
+javascrip <a href="javascript:void(0);"> con el siguiente formato:
+<a href="javascript:void(0);">
+<img ………..src="/Fotos/2.jpg" />
+</a>
+Que equivale a la siguiente función de javascript
+<a href="#" onclick="void(0)">
+ La página Web se debe poder ver en los siguientes navegadores: Mozilla y
+Chrome.
+ Para el título y pie de página se debe utilizar una tipografía especial,
+utilizando la propiedad @front-face
+ Utiliza transformaciones CSS para gestionar los tamaños de las imágenes.
+ Se debe utilizar el mínimo de líneas de código tanto de HTML como de CSS
+para realizar el ejercicio
+ Se debe documentar adecuadamente todo el código, CSS, HTML y
+JavaScript tal y como se ha visto en clase.
+-->
+
+<!--
+Copyright (C) 2014 Diego Rodríguez Suárez-Bustillo
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<html>
+    <head>
+        <title>Galería de fotos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <section id="gallery">
+                <header id="title">
+                    Galería de Fotos
+                </header>
+                <article id="mini-gal">
+                    <a href="javascript:cambiar(1);"><img src="fotos/1.jpg" alt="1" class="mini"/></a>
+                    <a href="javascript:cambiar(2);"><img src="fotos/2.jpg" alt="2" class="mini"/></a>
+                    <a href="javascript:cambiar(3);"><img src="fotos/3.jpg" alt="3" class="mini"/></a>
+                    <a href="javascript:cambiar(4);"><img src="fotos/4.jpg" alt="4" class="mini"/></a>
+                    <a href="javascript:cambiar(5);"><img src="fotos/5.jpg" alt="5" class="mini"/></a>
+                    <a href="javascript:cambiar(6);"><img src="fotos/6.jpg" alt="6" class="mini"/></a>
+                    <a href="javascript:cambiar(7);"><img src="fotos/7.jpg" alt="7" class="mini"/></a>
+                    <a href="javascript:cambiar(8);"><img src="fotos/8.jpg" alt="8" class="mini"/></a>
+                </article>
+<!--                <article id="mini-gal">
+                    <img src="fotos/1.jpg" alt="1" class="mini" onmouseover="cambiar(1)"/>
+                    <img src="fotos/2.jpg" alt="2" class="mini" onmouseover="cambiar(2)"/>
+                    <img src="fotos/3.jpg" alt="3" class="mini" onmouseover="cambiar(3)"/>
+                    <img src="fotos/4.jpg" alt="4" class="mini" onmouseover="cambiar(4)"/>
+                    <img src="fotos/5.jpg" alt="5" class="mini" onmouseover="cambiar(5)"/>
+                    <img src="fotos/6.jpg" alt="6" class="mini" onmouseover="cambiar(6)"/>
+                    <img src="fotos/7.jpg" alt="7" class="mini" onmouseover="cambiar(7)"/>
+                    <img src="fotos/8.jpg" alt="8" class="mini" onmouseover="cambiar(8)"/>
+                </article>-->
+                <article>
+                    <img src="fotos/5.jpg" alt="Foto número 5" id="full"/>
+                </article>
+            </section>
+            <footer>
+                Pie de Página
+            </footer>
+        </div>
+        <script type="text/javascript">
+            /**
+             * @description Función para cambiar la imágen mostrada en grande
+             * @param {Integer} numero
+             */
+            function cambiar(numero){
+                var full = document.getElementById('full');
+                full.src = 'fotos/' + numero + '.jpg';
+                full.alt = 'Foto número '+ numero;
+            }
+        </script>
+    </body>
+</html>

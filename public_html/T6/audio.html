@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+Autor = Diego Rodríguez Suárez-Bustillo
+Fecha = 27-feb-2015
+Licencia = gpl30 
+Version = 1.0
+Descripcion = 
+-->
+
+<!--
+Copyright (C) 2015 Diego Rodríguez Suárez-Bustillo
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="" rel="stylesheet" />
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <!--        <h2>MP3</h2>
+                BGSOUND
+                <bgsound src="audio/cancion1.mp3" loop="2" volume="20"></bgsound>
+                <hr>
+                EMBED
+                <embed src="audio/cancion1.mp3" type="audio/mpeg" loop="false" controller="false">
+                <hr>
+                OBJECT
+                <object data="audio/cancion1.mp3"></object>
+                
+                <h2>OGG</h2>
+                BGSOUND
+                <bgsound src="audio/cancion2.ogg" loop="2" volume="20"></bgsound>
+                <hr>
+                EMBED
+                <embed src="audio/cancion2.ogg" type="audio/mpeg" loop="false" controller="false">
+                <hr>
+                OBJECT
+                <object data="audio/cancion2.ogg"></object>
+                
+                <h2>WAV</h2>
+                BGSOUND
+                <bgsound src="audio/cancion3.wav" loop="2" volume="20"></bgsound>
+                <hr>
+                EMBED
+                <embed src="audio/cancion3.wav" type="audio/mpeg" loop="false" controller="false">
+                <hr>
+                OBJECT
+                <object data="audio/cancion3.wav"></object>
+                
+                <h2>WMA</h2>
+                BGSOUND
+                <bgsound src="audio/cancion4.wma" loop="2" volume="20"></bgsound>
+                <hr>
+                EMBED
+                <embed src="audio/cancion4.wma" type="audio/mpeg" loop="false" controller="false">
+                <hr>
+                OBJECT
+                <object data="audio/cancion4.wma"></object>-->
+
+        <h2>AUDIO</h2>
+        <audio controls autoplay>
+            <source src="audio/cancion1.mp3" type="audio/mpeg">
+            <source src="audio/cancion2.ogg" type="audio/ogg">
+            <source src="audio/cancion3.wav" type="audio/ogg">
+            Your browser does not support this audio format.
+        </audio>
+
+        <audio controls id="player">
+            <source src="audio/cancion1.mp3" type="audio/mpeg">
+            <source src="audio/cancion2.ogg" type="audio/ogg">
+            <source src="audio/cancion3.wav" type="audio/ogg">
+            <embed height="50" width="100" src="audio/cancion1.mp3">
+        </audio>
+
+        <div>
+            <input name="boton" type="button" value="Play" onclick="document.getElementById('player').play()">
+            <input name="boton" type="button" value="Pausa" onclick="document.getElementById('player').pause()">
+            <input name="boton" type="button" value="+Vol" onclick="if (document.getElementById('player').volume<1){document.getElementById('player').volume += 0.1}">
+            <input name="boton" type="button" value="-Vol" onclick="if (document.getElementById('player').volume>0){document.getElementById('player').volume -= 0.1}">
+        </div>
+    </body>
+</html>

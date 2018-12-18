@@ -1,0 +1,104 @@
+/*
+ * Autor= Laura Lozano
+ * Fecha= 03-oct-2014
+ * Licencia= gpl30
+ * Version= 1.0
+ * Descripcion=  Ejemplo de como documentar y escribir de forma correcta reglas CSS
+ * /     
+         
+         
+/* 
+ * Copyright (C) 2014 Laura Lozano
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*Al principio del CSS ponemos los estilos sobre selectores de etiquetas comunes*/
+
+/*Estilos para el elemento raíz (tag html)*/
+root { 
+    display: block;
+}
+h1{
+
+}
+h2{
+
+}
+
+/* Utilizamos selectores de identificador para capas y secciones que serán únicas y
+les ponemos nombres estándar */
+
+/* Añadimos comentarios  explicativos, indicando para qué es ese estilo y lo relevante del mismo*/
+
+/* Estilo para la cabecera */
+#header {
+
+}
+
+/* Estilo para un menu - Indicamos su localización real (por ejemplo, menú bajo cabecera) */
+#menu {
+
+}
+
+/* Estilo para barra lateral*/
+#sidebar {
+
+}
+
+/* Estilo para el footer */
+#footer {
+
+}
+
+/* Estilo para el contenido principal, también puedes llamarlo content */
+#main{
+
+}
+/* Utilizo selectores de clase para poder aplicar estilos a varios elementos o para elementos 
+que no son capas o secciones principales*/
+/* Agrupamos las reglas por selector */
+/* Definimos anidamientos siempre que sea necesario */
+#main table{
+
+}
+
+#main table.miembros{
+
+}
+
+#main table.empleados{
+
+}
+/* Si voy a tener tablas en otras capas y el estilo va a ser igual en todas no anidamos */
+
+/* Si el estilo de p fuese el mismo en todo el html lo definiriamos al principio del CSS*/
+#main p{
+
+}
+
+
+/* Igual que antes, primero reglas para etiquetas,luego para clases*/
+#main .introduccion{
+
+}
+/*
+ * 1º el root
+ * 2º tags html
+ * 3º ID de las secciones principales
+ *     Luego especificaciones de las secciones para tags
+ *     Luego IDs
+ *     Luego para clases
+ * 4º Clases
+ */

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Haciendo una nota con estilo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+
+            div#content  /*Define una identificador "content" asociado a un elemento <div>. Es la posición del cuerpo de la página (barra lateral más contenido) */
+            {
+                margin:auto auto auto auto;  /* top right bottom left: equivale a poner un sólo auto */
+                width:710px; /* El ancho del estilo lo coloca en 710px */
+            }
+            div#header /*Define una identificador "header" asociado a un elemento <div>. Es la posici�n de la cabecera */
+            {
+                margin:10px auto 10px auto;
+                width:710px;
+                border:dotted 1px #CCC;
+            }
+            div#sidebar
+            {
+                display:none;
+                border:solid 1px #CCC;
+                margin: auto auto auto 15px;
+            }
+
+            body.main-sidebar > div#main, body.sidebar-main > div#main
+            {
+                width:490px;
+            }
+
+            body.main-sidebar > div#sidebar, body.sidebar-main > div#sidebar
+            {
+                display:block;
+                width:200px;
+                border:solid 1px #CCC;
+            }
+            body.main-sidebar > div#main, body.main-sidebar > div#sidebar  /*Main-sidebar. Este estilo coloca el sidebar a la derecha y el main a la izquierda */
+            {
+                float:left;
+                border:solid 1px #CCC;
+            }
+            body.sidebar-main > div#main, body.sidebar-main > div#sidebar /*Sidebar-main. Este estilo coloca el sidebar a la izquierda y el main a la derecha*/
+            {
+                float:right;
+                border:solid 1px #CCC;
+            }
+
+
+
+        </style>
+    </head>
+
+    <body class="main-sidebar">
+        <div id="header">Cabecera. RESTAURANTE: El muslito</div>
+
+        <div id="content">
+            <div id="main">Este restaurante es una de las referencias gastronómicas del esta zona. [...] </div>
+            <div id="sidebar">Menú principal </div>
+
+        </div>
+    </body>
+
+
+</html>

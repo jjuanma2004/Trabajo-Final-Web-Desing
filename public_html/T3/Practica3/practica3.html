@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+Autor = Diego Rodríguez Suárez-Bustillo
+Fecha = 01-dic-2014
+Licencia = gpl30 
+Version = 1.0
+Descripcion = Felicitación navideña del IES Ciudad Escolar
+-->
+
+<!--
+Copyright (C) 2014 Diego Rodríguez Suárez-Bustillo
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<html>
+    <head>
+        <title>¡Feliz Navidad!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" />
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="alert">
+                <img src="img/alert.png" alt="Alerta" /><p>Estás utilizando un navegador que no soporta caracteristicas de CSS3.<br>
+                    Te recomiendo actualizar tu navegador a una versión más reciente para poder disfrutar de esta felicitación</p>
+            </div>
+        <div id="card">
+            <div class="layer" id="text">
+                <span>IES Ciudad Escolar<br>te desea</span>
+                <span>Feliz Navidad</span>
+            </div>
+            <div class="layer" id="author">
+                <span>2o daw</span>
+                <span>Diego Rodríguez Suárez-Bustillo</span>
+            </div>
+            <div class="layer" id="snowWrapper"></div>
+            <div class="layer" id="moon"></div>
+            <div class="layer" id="trees"></div>
+            <div class="layer" id="back"></div>
+            <div class="layer" id="middle"></div>
+            <div class="layer" id="front"></div>
+            <div class="layer lights lights1"></div>
+            <div class="layer lights lights2"></div>
+            <div class="layer lights lights3"></div>
+            <div class="layer window"></div>
+            <div class="layer shape"></div>
+            <div class="layer santa"></div>
+            <div class="layer" id="pointer" onclick="makeSnow()" title="¡Quiero más nieve!"></div>
+        </div>
+         </div>
+        <script>
+            window.onload = checkAttributes;
+        </script>
+    </body>
+</html>

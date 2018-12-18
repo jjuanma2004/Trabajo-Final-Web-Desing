@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+Autor = Diego Rodríguez Suárez-Bustillo
+Fecha = 14-nov-2014
+Licencia = gpl30 
+Version = 1.0
+Descripcion = Realizar con CSS3 la animación que se muestra en el vídeo Práctica2.mp4 y
+Práctica2.wmv con los recursos proporcionados en la carpeta Práctica2 y subir
+todo el proyecto comprimido en un fichero.
+Para realizar la animación se deben tener en cuenta los siguientes requisitos:
+ El color del fondo del título cambia de amarillo a violeta, y luego a
+Amarillo
+ El coche está fijo
+ Las ruedas del coche giran
+ La figura paisaje_arboles.png se mueve de manera infinita
+ Las nubes están fijas
+ El sol se mueve y cambia de color, con una velocidad diferente a la de la
+figura paisaje_arboles.png
+ Las tres nubes llamadas tormenta.png están a diferentes alturas y tienen
+diferentes velocidades
+ El sol y las tres nubes inician la animación por la izquierda
+ La farola se mueve de derecha a izquierda, y lo hace con la misma
+velocidad que la figura paisaje_arboles.png
+ Todas las animaciones se mueven de manera infinita.
+-->
+
+<!--
+Copyright (C) 2014 Diego Rodríguez Suárez-Bustillo
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<html>
+    <head>
+        <title>Práctica 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="titulo">Animación coche</div>
+            <div id="animacion">
+                <div id="cielo"></div>
+                <div id="fondo"></div>
+                <div id="farola"></div>
+                <div id="coche"></div>
+                <div class="rueda" id="izquierda"></div>
+                <div class="rueda" id="derecha"></div>
+                <div id="sol"></div>
+                <div class="nube" id="n1"></div>
+                <div class="nube" id="n2"></div>
+                <div class="nube" id="n3"></div>
+            </div>
+        </div>
+    </body>
+</html>

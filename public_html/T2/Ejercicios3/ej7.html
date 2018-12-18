@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--
+Autor = Diego Rodríguez Suárez-Bustillo
+Fecha = 24-oct-2014
+Licencia = gpl30 
+Version = 1.0
+Descripcion = Desarrolla una página html y una hoja de estilos para definir una
+estructura de capas de una página web formada por header, footer, sidebar
+a la izquierda (15%) y cuerpo (85%).
+a. Debes utilizar los atributos de posicionamientos vistos en clase que
+consideres adecuados
+b. Debes añadir imágenes de fondo para el header y el footer
+c. En el header añade un logo a la izquierda y un slogan que empieze a
+continuación de la imagen. El logo y el eslogan se deben de ver en
+primer plano por encima de la imagen de fondo.
+d. En el footer añade en alineado a la izquierda dos enlaces, uno que se
+llame Ayuda y otro Condiciones de Uso.
+e. En el sidebar añade una lista de enlaces.
+f. Define pseudoelementos para los enlaces del sidebar de manera que
+se diferencie cuando el usuario pone el cursor encima, cuando es un
+enlace normal y cuando lo ha visitado.
+g. Define pseudoelementos para los enlaces del footer de manera que
+se diferencie cuando el usuario pone el cursor encima, cuando es un
+enlace normal y cuando lo ha visitado. Estos pseudoelementos deben
+ser distintos a los de los enlaces del sidebar.
+h. En el cuerpo añade un artículo formado por dos párrafos. Añade una
+identación a la primera línea de cada párrafo de 10px. Además la 1ª
+letra de cada línea del 2º párrafo debe aparecer en mayúsculas y
+negrita.
+-->
+
+<!--
+Copyright (C) 2014 Diego Rodríguez Suárez-Bustillo
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<html>
+    <head>
+        <title>Ejercicio 7</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            #header{
+                height: 150px;
+                background-image: url('texture.jpg');
+                position: relative;
+            }
+            #sidebar{
+                float: left;
+                width: 15%;
+                height: 700px;
+            }
+            #main{
+                width: 85%;
+            }
+            #footer{
+                clear:left;
+                height: 50px;
+                background-image: url('texture.jpg');
+                position: relative;
+            }
+            #logo{
+                width: 100px;
+                position: relative;
+                top: 25px;
+                left: 25px;
+                float: left;
+            }
+            #eslogan{
+                position: relative;
+                top: 110px;
+                left: 20px;
+                font: 20px arial;
+            }
+            #enlaces{
+                display: absolute;
+                top: 50px;
+                left: 100px;
+            }
+            /*Menu*/
+            a{
+                text-decoration: none;
+            }
+            #sidebar li{
+                list-style: none;
+            }
+            #sidebar a:link{
+                color: magenta;
+            }
+            #sidebar a:hover{
+                color: yellow;
+            }
+            #sidebar a:visited{
+                color: pink;
+            }
+            #footer a:link{
+                color: pink;
+            }
+            #footer a:hover{
+                color: magenta;
+            }
+            #footer a:visited{
+                color: yellow;
+            }
+            /*parrafos*/
+            #main p{
+                text-indent: 10px;
+            }
+            #main p:nth-child(2):first-letter {
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+
+            div{
+                border: 0px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <img src="logo.png" alt="logo" id="logo"/>
+            <span id="eslogan">Eslogan</span>
+        </div>
+        <div id="sidebar">
+            <ul>
+                <li><a href="#">Enlace</a></li>
+                <li><a href="#">Enlace</a></li>
+                <li><a href="#">Enlace</a></li>
+                <li><a href="#">Enlace</a></li>
+                <li><a href="##">Enlace</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <p>Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo <br>Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo </p>
+            <p>Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo <br>Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo Parrafo </p>
+        </div>
+        <div id="footer">
+            <div id="enlaces">
+                <a href="#">Ayuda</a> | 
+                <a href="#">Condiciones de uso</a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,294 @@
+/*
+Autor = Diego Rodríguez Suárez-Bustillo
+Fecha = 01-dic-2014
+Licencia = gpl30
+Version = 1.0
+Descripcion = Estilos para la felicitación de navidad
+*/
+
+/*
+Copyright (C) 2014 Diego Rodríguez Suárez-Bustillo
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/*Orden z-index
+1Arboles 2Luces 3Fondo 4Nieve 5Medio 6Nieve 7Frente 8-9Ventana 10Nieve 11Texto*/
+/*Fuente personalizada*/
+@font-face {
+    font-family: 'LearningCurve';
+    src: url('../font/LearningCurve_OT-webfont.eot');
+    src: url('../font/LearningCurve_OT-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/LearningCurve_OT-webfont.woff') format('woff'),
+         url('../font/LearningCurve_OT-webfont.ttf') format('truetype'),
+         url('../font/LearningCurve_OT-webfont.svg#learning_curve_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*Estilos comunes*/
+*{margin:0;padding:0;}
+/*Absolutos*/
+#moon, #text, #text span, #author span, .layer, .snowflake{position: absolute;}
+/*Height 900px*/
+#wrapper, #card, .layer, .snowflake{height: 900px;}
+/*Margin 20px auto*/
+#wrapper, #card{margin: 20px auto;}
+/*Width 600px*/
+#card, .layer{width: 600px;}
+/*Top 0*/
+#text span:first-child, .snowflake{top: 0;}
+/*Top 150px*/
+#text, #text span{top: 150px;}
+/*Font*/
+#text, #author{font-family: 'LearningCurve', serif, sans-serif; color: #fff;}
+/*No repetir background*/
+.layer{background-repeat: no-repeat;}
+/*Estilo del wrapper*/
+#wrapper{
+    width: 700px;
+}
+/*Estilos del mensaje de aviso*/
+#alert{
+    display: none;
+    background: #d10000;
+    color: white;
+    font-family: sans-serif;
+    width: 610px;
+    margin: 0 auto;
+    padding: 10px;
+}
+#alert img, #alert p{
+    display: inline-block;
+    width: 50px;
+}
+#alert p{
+    padding-left: 15px;
+    width: 545px;
+}
+/*Estilos de la tarjeta de navidad*/
+#card{
+    position: relative;
+    border: 15px solid #fff;
+    box-shadow: 0 0 20px #bababa; 
+    background: #0c3a61 linear-gradient(black, #0c3a61);
+}
+/*Estilos para la capa que genera nieve*/
+#pointer{
+    z-index: 11; 
+    cursor: pointer
+}
+/*Estilos de la luna*/
+#moon{
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    right: 50px;
+    background: #fffac6;
+    border-radius: 50%;
+    box-shadow:0 0 15px rgba(255, 251, 219,0.5), 0 0 75px rgba(255, 251, 219,0.5);
+    z-index: 0;
+}
+/*Estilos del mensaje de navidad y sus animaciones*/
+#text{
+    height: 300px;
+    font-size: 95px;
+    text-shadow: 0 0 10px ghostwhite;
+    z-index: 11;
+}
+#text span{
+    left: 100px;
+    width: 450px;
+    margin-bottom: 25px;
+    -webkit-animation: msg 2s 1 4s ease-out both;
+    animation: msg 2s 1 4s ease-out both;
+}
+#text span:first-child{
+    font-size: 50px;
+    -webkit-animation: msg 1.5s 1 2s both ease-out;
+    animation: msg 1.5s 1 2s ease-out both;
+}
+@keyframes msg{
+    from {left: 0; opacity: 0;}
+    to {left: 100px; opacity: 1;}
+}
+@-webkit-keyframes msg{
+    from {left: 0; opacity: 0;}
+    to {left: 100px; opacity: 1;}
+}
+/*Estilos del nombre de autor y sus animaciones*/
+#author span{
+    bottom: 0;
+    right: 0;
+    margin-right: 5px;
+    font-size: 32px;
+    text-shadow: none;
+    -webkit-animation: author 1.5s 1 5s ease-out both;
+    animation: author 1.5s 1 5s ease-out both;
+    z-index: 11;
+}
+#author span:first-child{
+    left: 5px;
+}
+@-webkit-keyframes author{
+    from {bottom: -30px; opacity: 0;}
+    to {bottom: 0; opacity: 1;}
+}
+@keyframes author{
+    from {bottom: -30px; opacity: 0;}
+    to {bottom: 0; opacity: 1;}
+}
+/*Estilos de las capas de imagenes*/
+#front{
+    background-image: url(../img/front.png);
+    height: 282px;
+    bottom: 0px;
+    z-index: 7;
+}
+#middle{
+    background-image: url(../img/middle.png);
+    height: 307px;
+    bottom: 76px;
+    z-index: 5;
+}
+#back{
+    background-image: url(../img/back.png);
+    height: 151px;
+    bottom: 128px;
+    z-index: 3;
+}
+#trees,.lights{
+    height: 224px;
+    bottom: 211px;
+}
+#trees{
+    background-image: url(../img/trees.png);
+    z-index: 1;
+}
+
+/*Estilos relacionados con las luces y sus animaciones*/
+.lights{
+    -webkit-animation: blink 3s infinite linear;
+    animation: blink 3s infinite linear;
+    opacity: 0;
+    z-index: 2;
+}
+.lights1{
+    background-image: url(../img/lights1.png);
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+.lights2{
+    background-image: url(../img/lights2.png);
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.lights3{
+    background-image: url(../img/lights3.png);
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+@-webkit-keyframes blink{
+    0% {opacity: 1;}
+    33%  {opacity: 1;}
+    33.1%  {opacity: 0;}
+    100%  {opacity: 0;}
+}
+@keyframes blink{
+    0% {opacity: 1;}
+    33%  {opacity: 1;}
+    33.1%  {opacity: 0;}
+    100%  {opacity: 0;}
+}
+/*Estilos relacionados con la ventana y sus animaciones*/
+.window, .shape{
+    height: 95px;
+    width: 60px;
+    left: 12px;
+    bottom: 80px;
+}
+.window{
+    z-index: 9;
+    background-image: url(../img/window.png);
+}
+.shape{
+    z-index: 8;
+    background: #ffec17 url(../img/shape.gif);
+    background-size: 60px 95px;
+    -webkit-animation: shape 35s infinite ease-in-out;
+    animation: shape 35s infinite ease-in-out;
+}
+@-webkit-keyframes shape{
+    0%, 10%, 100% {background-position: -30px 0;}
+    20%, 60% {background-position: 30px 0;}
+    65% {background-position: 15px 0;}
+    80% {background-position: 10px 10px;}
+    90% {background-position: -30px 10px;}
+}
+@keyframes shape{
+    0%, 10%, 100% {background-position: -30px 0;}
+    20%, 60% {background-position: 30px 0;}
+    65% {background-position: 15px 0;}
+    70% {background-position: 10px 0;}
+    80% {background-position: 10px 10px;}
+    90% {background-position: -30px 10px;}
+}
+/*Estilos de Santa y sus animaciones*/
+.santa{
+    background-image: url(../img/sledge.gif);
+    background-size: 210px 70px;
+    opacity: 0.9;
+    -webkit-animation: santa 20s infinite 7s linear both;
+    animation: santa 20s infinite 7s linear both;
+}
+@-webkit-keyframes santa{
+    0% {background-position: -204px 150px}
+    30% {background-position: 600px 50px}
+    100% {background-position: 600px 150px}
+}
+@keyframes santa{
+    0% {background-position: -204px 150px}
+    30% {background-position: 600px 50px}
+    100% {background-position: 600px 150px}
+}
+/*Estilos relacionados con la nieve y sus animaciones*/
+.snowflake{
+    width: 80px;
+    background: url(../img/snowflake.png) no-repeat 0 -5px;
+    -webkit-animation: none 24s infinite backwards ease-out;
+    animation: none 24s infinite backwards ease-out;
+}
+.big{background-size: 5px; z-index: 10;}
+.normal{background-size: 3px; z-index: 6;}
+.small{background-size: 1px; z-index: 4;}
+.right{-webkit-animation-name: fall-right;animation-name: fall-right;}
+.left{-webkit-animation-name: fall-left;animation-name: fall-left;}
+@-webkit-keyframes fall-right {
+    0% {background-position: 0 -5px; opacity: 1; }
+    90% {background-position: 75px 890px ; opacity: 1; }
+    100% {background-position: 75px 895px ; opacity: 0; } 
+}
+@-webkit-keyframes fall-left {
+    0% {background-position: 60px -5px; opacity: 1; }
+    90% {background-position: 5px 890px ; opacity: 1;}
+    100% {background-position: 5px 895px ; opacity: 0; } 
+}
+@keyframes fall-right {
+    0% {background-position: 0 -5px; opacity: 1; }
+    90% {background-position: 75px 890px ; opacity: 1; }
+    100% {background-position: 75px 895px ; opacity: 0; } 
+}
+@keyframes fall-left {
+    0% {background-position: 60px -5px; opacity: 1; }
+    90% {background-position: 5px 890px ; opacity: 1;}
+    100% {background-position: 5px 895px ; opacity: 0; } 
+}

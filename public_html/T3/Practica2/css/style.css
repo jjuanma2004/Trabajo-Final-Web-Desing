@@ -1,0 +1,264 @@
+/*
+Autor = Diego Rodríguez Suárez-Bustillo
+Fecha = 14-nov-2014
+Licencia = gpl30
+Version = 1.0
+Descripcion = Estilos de la practica 2
+*/
+
+/*
+Copyright (C) 2014 Diego Rodríguez Suárez-Bustillo
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/*Estilos comunes*/
+*{padding:0;margin:0;}
+#animacion,#cielo, #fondo{height: 370px;}
+#animacion,#cielo, #fondo,#farola,#sol,.nube{width: 370px;}
+#coche,#farola,#sol{height: 80px;}
+#cielo,#fondo,#coche,.rueda,#farola,#sol,.nube{position: absolute;}
+
+/*Estilos del cuerpo*/
+body{background: green;}
+
+/*Estilos del titulo*/
+#titulo{
+    height: 100px;
+    text-align: center;
+    font-size: 90px;
+    color: white;
+    animation: titulo 5s infinite;
+    -moz-animation: titulo 5s infinite;
+    -webkit-animation: titulo 5s infinite;
+}
+
+/*Estilos del envoltorio*/
+#wrapper{
+    background: gray;
+    width: 900px;
+    margin: 10px auto 0;
+    padding-top: 10px;
+}
+
+/*Estilos del cuadro de animacion*/
+#animacion{
+    position: relative;
+    margin: 0 auto;
+}
+
+/*Estilos para el cielo*/
+#cielo{
+    background-image: url('../img/nubes.png');
+}
+
+/*Estilos para el paisaje*/
+#fondo{
+    background-image: url('../img/paisaje_arboles.png');
+    animation: fondo 9s infinite linear;
+    -moz-animation: fondo 9s infinite linear;
+    -webkit-animation: fondo 9s infinite linear;
+}
+
+/*Estilos del coche*/
+#coche{
+    background-image: url('../img/cochesr.png');
+    width: 140px;
+    top: 280px;
+    left: 110px;
+}
+
+/*Estilos comunes de las ruedas*/
+.rueda{
+    background-image: url('../img/rueda.png');
+    width: 60px;
+    height: 60px;
+    top: 305px;
+    animation: rueda 1.8s infinite linear;
+    -moz-animation: rueda 1.8s infinite linear;
+    -webkit-animation: rueda 1.8s infinite linear;
+}
+
+/*Estilo de rueda izquierda*/
+#izquierda.rueda{
+    left: 106px;
+}
+
+/*Estilo de rueda derecha*/
+#derecha.rueda{
+    left: 193px;
+}
+
+/*Estilos de la farola*/
+#farola{
+    background: url('../img/farola.png') no-repeat;
+    top: 240px;
+    animation: farola 9s infinite linear;
+    -moz-animation: farola 9s infinite linear;
+    -webkit-animation: farola 9s infinite linear;    
+}
+
+/*Estilos del sol*/
+#sol{
+    background: url('../img/sol.png') no-repeat;
+    top: 10px;
+    animation: sol 15s infinite ease-out;
+    -moz-animation: sol 15s infinite ease-out;
+    -webkit-animation: sol 15s infinite ease-out;
+}
+
+/*Estilos de las nubes*/
+.nube{
+    background: url('../img/tormenta.png') no-repeat;
+    height: 90px;
+    animation: nube 18s infinite backwardslinear backwards;
+    -moz-animation: nube 18s infinite linear backwards;
+    -webkit-animation: nube 18s infinite linear backwards;
+}
+
+/*Estilo de la nube 1*/
+#n1.nube{
+    top: 10px;
+    animation-duration: 18s;
+    -moz-animation-duration: 18s;
+    -webkit-animation-duration: 18s;
+}
+
+/*Estilo de la nube 2*/
+#n2.nube{
+    top: 70px;
+    animation-duration: 12.5s;
+    animation-delay: 3s;
+    -moz-animation-duration: 12.5s;
+    -moz-animation-delay: 3s;
+    -webkit-animation-duration: 12.5s;
+    -webkit-animation-delay: 3s;
+}
+
+/*Estilo de la nube 3*/
+#n3.nube{
+    top: 100px;
+    animation-duration: 9s;
+    animation-delay: 1s;
+    -moz-animation-duration: 9s;
+    -moz-animation-delay: 1s;
+    -webkit-animation-duration: 9s;
+    -webkit-animation-delay: 1s;
+}
+
+/****keyframes****/
+/*Titulo*/
+@keyframes titulo{
+    0%{background: yellow}
+    50%{background: violet}
+    100%{background: yellow}
+}
+@-moz-keyframes titulo{
+    0%{background: yellow}
+    50%{background: violet}
+    100%{background: yellow}
+}
+@-webkit-keyframes titulo{
+    0%{background: yellow}
+    50%{background: violet}
+    100%{background: yellow}
+}
+
+/*Rueda*/
+@keyframes rueda{
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+@-moz-keyframes rueda{
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+@-webkit-keyframes rueda{
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+
+/*Fondo*/
+@keyframes fondo{
+    from {background-position: 0 0;}
+    to {background-position: -1200px 0;}
+}
+@-moz-keyframes fondo{
+    from {background-position: 0 0;}
+    to {background-position: -1200px 0;}
+}
+@-webkit-keyframes fondo{
+    from {background-position: 0 0;}
+    to {background-position: -1200px 0;}
+}
+
+/*Farola*/
+@keyframes farola{
+    from {background-position: 410px 0;}
+    to {background-position: -790px 0;}
+}
+@-moz-keyframes farola{
+    from {background-position: 410px 0;}
+    to {background-position: -790px 0;}
+}
+@-webkit-keyframes farola{
+    from {background-position: 410px 0;}
+    to {background-position: -790px 0;}
+}
+
+/*Nube*/
+@keyframes nube{
+    0% {background-position: -150px}
+    15% {background-position: -50px}
+    35% {background-position: 95px}
+    50% {background-position: 150px; opacity: 1;}
+    75% {background-position: 275px; opacity: 0;}
+    100% {background-position: 370px}
+}
+@-moz-keyframes nube{
+    0% {background-position: -150px}
+    15% {background-position: -50px}
+    35% {background-position: 95px}
+    50% {background-position: 150px; opacity: 1;}
+    75% {background-position: 275px; opacity: 0;}
+    100% {background-position: 370px}
+}
+@-webkit-keyframes nube{
+    0% {background-position: -150px}
+    15% {background-position: -50px}
+    35% {background-position: 95px}
+    50% {background-position: 150px; opacity: 1;}
+    75% {background-position: 275px; opacity: 0;}
+    100% {background-position: 370px}
+}
+
+/*Sol*/
+@keyframes sol{
+    0% {background-position: -80px}
+    60% {opacity: 1;}
+    70% {background-position: 280px;opacity: 1;}
+    100% {background-position: 370px; opacity: 0;}
+}
+@-moz-keyframes sol{
+    0% {background-position: -80px}
+    60% {opacity: 1;}
+    70% {background-position: 280px;opacity: 1;}
+    100% {background-position: 370px; opacity: 0;}
+}
+@-webkit-keyframes sol{
+    0% {background-position: -80px}
+    60% {opacity: 1;}
+    70% {background-position: 280px;opacity: 1;}
+    100% {background-position: 370px; opacity: 0;}
+}

@@ -1,0 +1,69 @@
+<!--
+    Autor=Laura Lozano Calvo
+    Fecha=25-oct-2013
+    Licencia=GPL v3
+    Versión=1.0
+    Descripción=Ejermplo de uso de CSS - Sprites
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            #icono1, #icono2, #icono3, #icono4{
+                height:40px;
+                width:42px;
+                /*line-height: 20px */;
+                background-image:url(Figuras.png);
+                background-repeat:no-repeat;
+            }
+            #icono1 {position:absolute;
+                     top:25%;
+                     left:70%;
+                     background-position:0 0;
+                     /*posición (0,0)*/
+            }
+            #icono2 {position:absolute;
+                     top:25%;
+                     left:80%;
+                     background-position:0 -210px;
+                     /*posición (0,-5), se multiplica por 42px*/
+            }
+            #icono3 {position:absolute;
+                     top:50%;
+                     left:70%;
+                     background-position:-42px -210px;
+                     /*teclado*/
+            }
+            #icono4 {position:absolute;
+                     top:50%;
+                     left:80%;
+                     background-position:-284px 0;
+                     /*posición (-7,0), se multiplica por 40 px*/
+            }
+            
+            body{
+                font-size: 62.5%;
+            }
+            #fuente{
+                font-size: 2em;
+                /*font-size: 20px;*/
+            }
+        </style>
+    </head>
+    <body>
+        <div id="fuente">
+            Texto en 2em (20px)
+        </div>
+        <div id="icono1">
+        </div>
+        <div id="icono2">
+        </div>
+        <div id="icono3">
+        </div>
+        <div id="icono4">
+        </div>
+    </body>
+</html>

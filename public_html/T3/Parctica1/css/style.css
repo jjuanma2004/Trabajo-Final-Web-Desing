@@ -1,0 +1,84 @@
+/*
+Autor = Diego Rodríguez Suárez-Bustillo
+Fecha = 07-nov-2014
+Licencia = gpl30
+Version = 1.0
+Descripcion = Estilo de la practica 1
+*/
+
+/*
+Copyright (C) 2014 Diego Rodríguez Suárez-Bustillo
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/*Estilo general del body*/
+body{
+    background-image: url('../fotos/2.jpg');
+    font-family: Tower;
+    font-size: 3em;
+}
+/*Estilo para etiquetas footer*/
+footer{
+    background-color: yellow;
+    color: blue;
+    font-size: 0.6em;
+}
+/*Estilo común de imagenes*/
+img{
+    border: solid 1px blue;
+}
+/*Estilos comunes*/
+footer, #title, #gallery{margin: 5px 0;}
+/*Estilo de imagen grande*/
+img#full{
+    margin: 50px 0;
+    transform: scale(1.2,1.2) rotateY(180deg);
+    -webkit-transform: scale(1.2,1.2) rotateY(180deg);
+    -moz-transform: scale(1.2,1.2) rotateY(180deg);
+}
+/*Estilo de imagenes mini*/
+img.mini{
+    width: 110px;
+    opacity: 0.7;
+}
+/*Estilo hover de imagenes mini*/
+img.mini:hover{
+    opacity: 1.0;
+}
+/*Estilo del envoltorio*/
+#wrapper{
+    width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0.93;
+}
+/*Estilo para el titulo*/
+#title{
+    background-image: url('../fotos/8.jpg');
+    background-size: 100% 100%;
+    color: yellow;
+}
+/*Estilo del articulo para galeria de miniaturas*/
+#mini-gal{
+    padding: 20px 50px;
+}
+/*Estilo para la seccion de galeria */
+#gallery{
+    background-color: violet;
+    min-height: 810px;
+}
+@font-face{
+    font-family: Tower;
+    src: url('../fuentes/EnglishTowne.ttf');
+}

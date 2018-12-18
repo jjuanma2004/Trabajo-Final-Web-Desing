@@ -1,0 +1,5 @@
+
+            ||Chrome||  ||Firefox|| ||IE||  ||Opera||
+||BGSOUND||     -            -         -        -
+|| EMBED ||     X            ?         X        X
+|| OBJECT||     X            X         X        X

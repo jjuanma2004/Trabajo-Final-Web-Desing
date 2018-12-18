@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+Autor = Diego Rodríguez Suárez-Bustillo
+Fecha = 10-oct-2014
+Licencia = gpl30 
+Version = 1.0
+Descripcion = a. ¿Qué distancia en píxeles hay entre el borde azul y el borde rojo? 15px
+b. ¿Qué distancia en píxeles hay entre el borde azul y el borde de la
+vista del navegador? 100px Aúmentala a 150px y nota la diferencia
+c. ¿Qué ocurre si cambiamos el valor de margin a -15px? el div sale por fuera de su contenedor y lo comprime
+-->
+
+<!--
+Copyright (C) 2014 Diego Rodríguez Suárez-Bustillo
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="" rel="stylesheet" />
+        <style type="text/css">
+            body{
+                margin-top: 100px;
+                margin-right: 100px;
+                margin-bottom: 100px;
+                margin-left: 100px;
+                border: 3px dotted blue;
+            }
+            div{
+                margin: -15px;
+                border: 3px dotted red;
+                font-size: 0.2in;
+            }
+        </style>
+    </head>
+    <body>
+        <div>Texto de 0.2 pulgadas</div>
+    </body>
+</html>

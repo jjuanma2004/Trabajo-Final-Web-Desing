@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Documento sin título</title>
+        <style type="text/css">
+            div.caja1{
+                background-color: #606; 
+                color:#ffc; 
+                padding:10px; 
+                text-align: center; 
+                width: 300px;
+            }
+            div.caja2{
+                position: absolute; 
+                width: 300px; 
+                padding: 10px; 
+                background-color: #066; 
+                text-align:right; 
+                color:#ffc; 
+                top:100px; 
+                left: 322px;
+            }
+            div.caja3{
+                position: relative; 
+                width: 300px; 
+                padding: 10px; 
+                background-color: #033; 
+                color:#ffc; 
+                top:0px; 
+                left: 30px;
+            }
+            div.caja4{
+                position: static; 
+                width: 300px; 
+                padding: 10px; 
+                background-color: #096; 
+                color:#ffc; 
+                top:10px; 
+                left: 30px;
+            }
+            div.caja5{
+                position: absolute; 
+                width: 350px; 
+                height:100px; 
+                padding: 10px; 
+                background-color: #666; 
+                text-align:right; 
+                color:#ffc; 
+                top:300px; 
+                left: 500px;
+            }
+            div.caja6{
+                position: absolute; 
+                width: 300px; 
+                padding: 10px; 
+                background-color: #111; 
+                text-align:right; 
+                color:#ffc; 
+                top:0px; 
+                left:5px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+
+        <h1>NO define posición</h1>
+
+        <div class="caja1">No define posición, por lo que es static</div>
+
+        <div class="caja2">Capa Absoluta (sólo tiene como contenedor a "body") por lo tanto es relativa a body. </div>
+        <div class="caja3">Capa de posicionamiento relative. Se coloca según la posición que le tocaría en el flujo HTML.</div>
+        <div class="caja4">Capa Fija se coloca como una absoluta</div>
+
+        <div class="caja5">
+            <div class="caja6"> Capa absoluta, se referencia según a su contenedor porque no es un static </div>
+        </div>
+        <h2>La última en ponerse</h2>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!--
+    Autor=Laura Lozano Calvo
+    Fecha=10-oct-2013
+    Licencia=GPL v3
+    Versión=1.0
+    Descripción=
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            div.capa1{
+                position:absolute;
+                width:300px;
+                height:140px;
+                top:100px;
+                left:30px;
+                background-color: #ff8800;
+                color:#fff;
+                padding: 15px;
+                z-index:2;
+            }
+            div.capa2{
+                position:static;
+                width:820px;
+                height:30px;
+                top:150px;
+                left:10px;
+                background-color: #ddf;
+                padding: 10px;
+                z-index:1;
+            }
+            div.capa3{
+                position:absolute;
+                width:500px;
+                height:20px;
+                bottom:10px;
+                right:10px;
+                background-color:#ddf;
+                padding: 10px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="capa1">Esta capa tiene posicionamiento absoluto. Permite especificar top y left 
+            para colocarla con respecto a la esquina superior izquierda</div>
+        <div class="capa2">Posicionamiento static. Las otras dos capas absolutas se posicionan después de la
+            static que se coloca arriba</div>
+        <div class="capa3">Posicionamiento absoluto con atributos bottom y rigth</div>
+    </body>
+</html>
